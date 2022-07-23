@@ -42,6 +42,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
     
+    protected $guarded = [];
+
+
     public function posts() 
     { 
        return $this->hasMany(Post::class);
