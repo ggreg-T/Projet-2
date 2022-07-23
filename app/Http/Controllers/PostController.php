@@ -30,7 +30,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        $rubriques = rubrique::all();
+        return view('post.create', compact('rubriques'));
     }
 
     /**
